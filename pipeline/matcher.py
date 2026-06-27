@@ -37,6 +37,10 @@ class BuyerProfile:
     max_l_per_100km: float | None = None       # economy ceiling (combustion)
     max_insurance_monthly: int | None = None   # SEK/month
     annual_km: int = 15_000                    # for fuel/TCO (≈1 500 mil/yr)
+    # Personal factors for the insurance estimate (constant across the shortlist).
+    driver_age: int | None = None              # None = experienced adult
+    claims_free_years: int | None = None       # None = typical; more = cheaper
+    home_city: str | None = None               # owner's city (else listing city)
     # Scoring weights (need not sum to 1; normalized internally).
     weights: dict = field(default_factory=lambda: {
         "deal": 0.35, "reliability": 0.25, "economy": 0.20, "headroom": 0.20})
@@ -135,7 +139,9 @@ def evaluate(listing: dict, deal_value: int | None, deal_pct: float | None,
     # --- cost model --------------------------------------------------------
     car_value = deal_value or price
     insurance_month = estimate_monthly_premium(
-        car_value, power_hp=(spec or {}).get("power_hp"), year=year)
+        car_value, power_hp=(spec or {}).get("power_hp"), year=year,
+        city=(profile.home_city or listing.get("city")),
+        driver_age=profile.driver_age, claims_free_years=profile.claims_free_years)
     if profile.max_insurance_monthly and insurance_month > profile.max_insurance_monthly:
         return None
 

@@ -45,6 +45,9 @@ def build_profile(args) -> BuyerProfile:
         max_l_per_100km=args.max_lphmil,
         max_insurance_monthly=args.max_insurance,
         annual_km=args.annual_km,
+        driver_age=args.driver_age,
+        claims_free_years=args.claims_free_years,
+        home_city=args.home_city,
     )
 
 
@@ -125,6 +128,9 @@ def main() -> None:
     ap.add_argument("--max-lphmil", type=float, default=None, help="max L/100km (combustion)")
     ap.add_argument("--max-insurance", type=int, default=None, help="max insurance SEK/month")
     ap.add_argument("--annual-km", type=int, default=15_000, help="yearly driving for cost calc")
+    ap.add_argument("--driver-age", type=int, default=None, help="driver age (affects insurance)")
+    ap.add_argument("--claims-free-years", type=int, default=None, help="skadefria år (bonus)")
+    ap.add_argument("--home-city", default=None, help="owner's city (affects insurance)")
     ap.add_argument("--limit", type=int, default=300, help="listings to consider")
     ap.add_argument("--top", type=int, default=5, help="results to show")
     args = ap.parse_args()
