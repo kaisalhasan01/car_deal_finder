@@ -25,8 +25,13 @@ from reference.known_issues_data import ISSUES       # noqa: E402
 def fetch_listings(source: str, query: str, pages: int, limit: int) -> list[dict]:
     if source == "sample":
         return sample_data.generate(n=limit)
-    if source == "blocket":
-        rows = [item.as_dict() for item in BlocketScraper().search(query=query, pages=pages)]
+    if source in ("blocket", "blocket-bd"):
+        if source == "blocket-bd":
+            from scrapers.blocket_brightdata import BlocketBrightDataScraper
+            scraper = BlocketBrightDataScraper()   # real data via Bright Data Web Unlocker
+        else:
+            scraper = BlocketScraper()             # plain requests (likely blocked)
+        rows = [item.as_dict() for item in scraper.search(query=query, pages=pages)]
         return rows[:limit] if limit else rows
     raise ValueError(f"unknown source: {source}")
 
@@ -51,7 +56,8 @@ def build_records(listings: list[dict], enable_carinfo: bool) -> list[dict]:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Swedish Car Deal Finder pipeline")
-    ap.add_argument("--source", choices=["sample", "blocket"], default="sample")
+    ap.add_argument("--source", choices=["sample", "blocket", "blocket-bd"], default="sample",
+                    help="blocket-bd = real listings via Bright Data Web Unlocker")
     ap.add_argument("--query", default="")
     ap.add_argument("--pages", type=int, default=1)
     ap.add_argument("--limit", type=int, default=200)

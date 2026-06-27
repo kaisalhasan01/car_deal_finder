@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import re
 import time
+import urllib.parse
 from dataclasses import asdict, dataclass
 from datetime import date
 from typing import Iterator
@@ -68,10 +69,18 @@ class BlocketScraper:
             if page < pages:
                 time.sleep(self.delay)
 
+    def _page_url(self, query: str, page: int) -> str:
+        """Build the full search URL. Shared by the plain and Bright Data scrapers.
+
+        TODO: confirm Blocket's current search path + param names against a live
+        page (the Bright Data probe in blocket_brightdata.py makes this easy).
+        """
+        params = {"q": query, "page": page}
+        return f"{BASE_URL}{SEARCH_PATH}?{urllib.parse.urlencode(params)}"
+
     def _fetch_page(self, query: str, page: int) -> str | None:
-        params = {"q": query, "page": page}  # TODO: confirm real param names
         try:
-            resp = self.session.get(f"{BASE_URL}{SEARCH_PATH}", params=params, timeout=20)
+            resp = self.session.get(self._page_url(query, page), timeout=20)
             resp.raise_for_status()
             return resp.text
         except requests.RequestException as exc:

@@ -73,12 +73,34 @@ python -m pipeline.recommend --budget 220000 --min-year 2016 \
 Then open `car_deals.db` in Power BI / DB Browser and use `analysis/queries.sql`
 (query 5 is the enriched base table for buyer slicers).
 
+## Real data via Bright Data (Web Unlocker)
+
+Blocket blocks plain scrapers, so real listings are fetched through Bright Data's
+**Web Unlocker** API (HTTP-based, auto-bypasses bot detection, geo-targeted to
+Sweden). Only the *fetch* step changes — all `__NEXT_DATA__` parsing is reused.
+
+```bash
+# 1) one-time: create a Web Unlocker zone in Bright Data, then:
+cp .env.example .env          # fill in BRIGHTDATA_API_KEY + BRIGHTDATA_UNLOCKER_ZONE
+
+# 2) probe a real page: saves HTML + screenshot to debug/, prints the JSON shape
+python -m scrapers.blocket_brightdata --probe "https://www.blocket.se/bilar/sok?q=volvo"
+
+# 3) run the pipeline on real listings
+python -m pipeline.run --source blocket-bd --query "volvo v60" --pages 2
+```
+
+> The probe step is how we finalize the parser: it reveals Blocket's *actual*
+> `__NEXT_DATA__` field paths so the `TODO`s in `scrapers/blocket.py`
+> (`_iter_raw_ads` / `_normalize`) can be confirmed against the live response.
+
 ## ⚠️ Notes & honesty
 
-- **Scraping:** the Blocket scraper is a best-effort draft (JSON paths marked
-  `TODO`). Blocket blocks bots and changes markup — personal/educational use only,
-  respect robots.txt and their ToS. The sample-data mode demonstrates everything
-  without touching the live site.
+- **Scraping:** real listings go through Bright Data Web Unlocker (`--source
+  blocket-bd`); the plain `requests` scraper (`--source blocket`) is a fallback
+  that Blocket will usually block. JSON field paths are marked `TODO` until
+  confirmed with the probe. Personal/educational use only — respect robots.txt
+  and Blocket's ToS. The sample-data mode demonstrates everything offline.
 - **Insurance** is a transparent *estimate* (no public premium API exists in SE).
 - **Known issues** are indicative, community-known faults — a guide for asking the
   right questions, **not** a substitute for a professional inspection/test drive.
@@ -89,8 +111,10 @@ Then open `car_deals.db` in Power BI / DB Browser and use `analysis/queries.sql`
 - [x] Star-schema SQLite, end-to-end pipeline on sample data
 - [x] Hybrid valuer (comparables + car.info stub)
 - [x] Buyer-advisor engine: specs, known-issues KB, insurance estimate, TCO, scoring
+- [x] Insurance estimator calibrated to real Swedish premium data
+- [x] Real-data path via Bright Data Web Unlocker (`--source blocket-bd`) + probe tool
+- [ ] Run the probe and confirm Blocket `__NEXT_DATA__` field paths against live data
 - [ ] Year/age-aware comparable valuation (current cohort fallback inflates discounts)
-- [ ] Confirm Blocket `__NEXT_DATA__` field paths against live responses
 - [ ] Power BI dashboard (.pbix) + optional interactive front-end (Streamlit)
 - [ ] Expand specs & known-issues coverage; migrate SQLite → PostgreSQL
 ```

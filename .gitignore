@@ -5,10 +5,14 @@ __pycache__/
 venv/
 env/
 
+# Secrets
+.env
+
 # Project data
 *.db
 *.sqlite
 *.sqlite3
+debug/
 
 # OS / editor
 .DS_Store
