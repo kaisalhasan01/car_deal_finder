@@ -75,3 +75,15 @@ def test_reference(client):
     issues = client.get("/reference/issues", params={"brand": "Audi", "model": "A4",
                                                      "year": 2010}).json()["items"]
     assert issues
+
+
+def test_demo_mode_is_labelled_and_never_leaks_ground_truth(tmp_path, monkeypatch):
+    """Without a database the API serves generated demo data: labelled demo, and the
+    generator's hidden truth (_fair_value, _injected_deal) must not reach the client."""
+    monkeypatch.setenv("CAR_DEALS_DB", str(tmp_path / "missing.db"))
+    service.clear_cache()
+    from api.main import app
+    body = TestClient(app).post("/recommend", json={"top_n": 5}).json()
+    service.clear_cache()
+    assert body["demo"] is True and body["results"]
+    assert not any(k.startswith("_") for r in body["results"] for k in r)

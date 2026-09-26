@@ -45,3 +45,8 @@ def test_sample_and_real_cannot_share_a_database(tmp_path, capsys):
     snapshots = tmp_path / "raw"
     list(BlocketScraper(session=FakeSession(), delay=0, snapshot_dir=snapshots).search(pages=5))
     assert run.main(["--source", "replay", "--replay", str(snapshots), "--db", str(dbfile)]) == 2
+
+
+def test_unknown_make_is_a_clean_error(tmp_path, capsys):
+    assert run.main(["--source", "blocket", "--make", "Batmobile", "--db", str(tmp_path / "x.db")]) == 2
+    assert "unknown make" in capsys.readouterr().out

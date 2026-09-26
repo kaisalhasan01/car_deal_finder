@@ -114,7 +114,11 @@ def main(argv: list[str] | None = None) -> int:
     today, started = date.today(), datetime.now().isoformat(timespec="seconds")
 
     print(f"[1/5] Fetching listings (source={args.source}) ...")
-    res = fetch(args)
+    try:
+        res = fetch(args)
+    except ValueError as exc:            # e.g. an unknown --make or --county
+        print(f"      ERROR: {exc}")
+        return 2
     print(f"      got {len(res.listings)} listings")
     if not res.listings:
         print("      nothing to load — stopping (see messages above).")

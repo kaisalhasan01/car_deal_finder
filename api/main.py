@@ -121,9 +121,9 @@ def recommend(profile: ProfileIn):
     budget headroom, never the discount alone."""
     market = _market()
     results = service.recommend(market, profile.to_profile(), top_n=profile.top_n)
-    for r in results:                              # keep the payload lean
-        r.pop("spec", None)
-        r.pop("lat", None), r.pop("lon", None)
+    # Keep the payload lean, and never leak the demo generator's hidden ground truth (_*).
+    results = [{k: v for k, v in r.items() if not k.startswith("_") and k not in ("spec", "lat", "lon")}
+               for r in results]
     return _envelope(market, count=len(results), results=results)
 
 
