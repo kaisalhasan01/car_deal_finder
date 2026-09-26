@@ -8,6 +8,20 @@
 > project. After that, `CLAUDE.md` is the short version loaded every session.
 > Talk to Kais in **Swedish**; code, comments and commits in **English**.
 
+> **UPDATE 2026-09-26 (evening, cloud session): parts of this file are now history.** The
+> project is on GitHub (`kaisalhasan01/car_deal_finder`). Read
+> [`docs/SESSIONSLOGG_2026-09-26.md`](docs/SESSIONSLOGG_2026-09-26.md) for everything that
+> changed. In short:
+> - Blocket moved to the FINN/Vend platform in late 2025. The `/bilar/sok` + `__NEXT_DATA__`
+>   approach in §3/§5 no longer exists, and the client now uses the public JSON search API
+>   (no key, so Bright Data is optional). The decision's intent still holds: structured JSON,
+>   plain requests.
+> - §8.1 (valuation), §8.2 (advisor reads DB), §8.6 (tests) and §8.8 (dim_car granularity) are
+>   fixed. §8.3 (parser unverified) is now "built on documented fields, still not
+>   live-verified". Run the probe first.
+> - The baseline in §6 changed on purpose: new valuation, a realistic sample generator, a
+>   separate `car_deals_sample.db`. The new reference output is in the session log.
+
 ---
 
 ## 1. TL;DR

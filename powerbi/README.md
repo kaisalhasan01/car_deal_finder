@@ -140,5 +140,6 @@ driver on your machine.
 - *Built an ETL pipeline in Python that ingests Blocket's car-search API, tracks daily price
   history and flags sold listings, with a run log for data lineage.*
 - *Estimated market value with a hierarchical hedonic regression (partial pooling,
-  leave-one-out), which cut valuation error from 8.3 % to 5.2 % MAPE against the cohort-median
-  baseline on synthetic ground truth.*
+  leave-one-out). Against the cohort-median baseline on synthetic ground truth it cut
+  valuation error (MAPE) from 7.6 % to 5.5 % in the conservative scenario and from 12.1 % to
+  4.2 % with realistic mileage effects, and it raised deal-detection F1 from 0.58 to 0.71.*
