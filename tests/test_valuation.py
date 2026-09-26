@@ -98,3 +98,28 @@ def test_summaries_and_curve_are_sane(sample):
     assert v60["value_age3_sek"] > v60["value_age8_sek"]
     curve = valuer.curve("Volvo", "V60", ages=range(0, 12))
     assert all(a["value"] > b["value"] for a, b in zip(curve, curve[1:]))
+
+
+@pytest.mark.parametrize("mileage_effect", ["proportional", "additive"])
+def test_value_is_monotone_in_age_and_mileage(mileage_effect):
+    """Kais's example: two 2011 Audi A4 at 50 000 kr are not equal buys at 10 000 vs
+    20 000 mil — and an older car with the same odometer is never worth more."""
+    valuer = HedonicValuer().fit(sample_data.generate(n=600, seed=3, mileage_effect=mileage_effect))
+    for year in range(2008, 2024):
+        values = [valuer.value({"brand": "Audi", "model": "A4", "year": year,
+                                "mileage": mil * 10}).value for mil in (5_000, 10_000, 20_000, 30_000)]
+        assert values == sorted(values, reverse=True), (year, values)   # more km -> worth less
+    for mil in (8_000, 15_000, 25_000):
+        by_age = [valuer.value({"brand": "Audi", "model": "A4", "year": year,
+                                "mileage": mil * 10}).value for year in range(2024, 2006, -1)]
+        # Older -> worth less. Model-year offsets (facelift years, a bad engine year) may
+        # invert neighbours by a few %; the regression curve itself must stay monotone.
+        assert all(older <= younger * 1.05 for younger, older in zip(by_age, by_age[1:])), by_age
+        curve = [c["value"] for c in valuer.curve("Audi", "A4", ages=range(0, 18))]
+        assert curve == sorted(curve, reverse=True)
+
+
+def test_out_of_range_valuations_are_flagged_low_confidence():
+    valuer = HedonicValuer().fit(sample_data.generate(n=400, seed=5))   # model years 2013–2022
+    old = valuer.value({"brand": "Audi", "model": "A4", "year": 2005, "mileage": 250_000})
+    assert old.extrapolated and old.confidence == "low"

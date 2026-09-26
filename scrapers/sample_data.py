@@ -7,6 +7,7 @@ mileage in Swedish "mil" (1 mil = 10 km); convert when wiring the live scraper.
 """
 from __future__ import annotations
 
+import math
 import random
 from datetime import date, timedelta
 
@@ -36,9 +37,14 @@ GEARBOXES = ["Manuell", "Automat"]
 COLORS = ["Svart", "Vit", "Silver", "Blå", "Grå", "Röd"]
 
 
-def generate(n: int = 200, seed: int = 42, deal_share: float = 0.18) -> list[dict]:
+def generate(n: int = 200, seed: int = 42, deal_share: float = 0.18,
+             mileage_effect: str = "proportional") -> list[dict]:
     """Synthetic listings. Fields prefixed `_` are hidden ground truth for evaluation
-    (`analysis/evaluate_valuation.py`) and are never loaded into the database."""
+    (`analysis/evaluate_valuation.py`) and are never loaded into the database.
+
+    mileage_effect: 'proportional' (~3 % per 10 000 km above normal, the default) or
+    'additive' (the original flat 0.8 kr/km, kept to test the valuer against a
+    world it was not designed for)."""
     rng = random.Random(seed)
     extra = random.Random(seed + 1)   # separate stream: keeps the original 200 cars identical
     today = date.today()
@@ -53,7 +59,12 @@ def generate(n: int = 200, seed: int = 42, deal_share: float = 0.18) -> list[dic
         # Realistic-ish mileage: ~1 500 mil/yr = 15 000 km/yr, with noise.
         mileage = int(rng.gauss(age * 15_000, 20_000))
         mileage = max(1_000, mileage)
-        fair_value -= (mileage - age * 15_000) * 0.8
+        # Each 10 000 km above what is normal for the age costs ~3 % (proportional, so an
+        # old cheap car can't turn negative the way the earlier flat 0.8 kr/km did).
+        if mileage_effect == "additive":
+            fair_value -= (mileage - age * 15_000) * 0.8
+        else:
+            fair_value *= math.exp(-0.03 * (mileage - age * 15_000) / 10_000)
 
         price = fair_value * rng.uniform(0.95, 1.06)
         injected = rng.random() < deal_share
