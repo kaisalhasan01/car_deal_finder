@@ -1,0 +1,33 @@
+{
+  "_fixture_note": "CONSTRUCTED fixture (page 2 of 2). Declares mileage_unit per ad to exercise the 'declared' unit path.",
+  "docs": [
+    {
+      "type": "car", "id": "20101010", "ad_id": 20101010, "main_search_key": "SEARCH_ID_CAR_USED",
+      "heading": "Audi A4 Avant 2.0 TFSI quattro", "location": "Stockholms län",
+      "timestamp": 1787356800000,
+      "canonical_url": "https://www.blocket.se/mobility/item/20101010",
+      "price": {"amount": 64900, "currency_code": "SEK", "price_unit": "kr"},
+      "year": 2011, "mileage": 21500, "mileage_unit": "SCANDINAVIAN_MILE",
+      "make": "Audi", "model": "A4", "model_specification": "Avant 2.0 TFSI quattro 211hk",
+      "fuel": "Bensin", "transmission": "Automat", "regno": "PQR67S", "dealer_segment": "Privat"
+    },
+    {
+      "type": "car", "id": "20101011", "ad_id": 20101011, "main_search_key": "SEARCH_ID_CAR_USED",
+      "heading": "Volkswagen Passat Sportscombi 2.0 TDI GTE", "location": "Kiruna",
+      "timestamp": 1787270400000,
+      "canonical_url": "https://www.blocket.se/mobility/item/20101011",
+      "price": {"amount": 189000, "currency_code": "SEK", "price_unit": "kr"},
+      "year": 2020, "mileage": 8800, "mileage_unit": "SCANDINAVIAN_MILE",
+      "make": "Volkswagen", "model": "Passat", "model_specification": "Sportscombi GTE",
+      "fuel": "Laddhybrid", "transmission": "Automat", "regno": "STU89V", "dealer_segment": "Privat"
+    }
+  ],
+  "filters": [],
+  "metadata": {
+    "search_key": "SEARCH_ID_CAR_USED",
+    "result_size": {"match_count": 11, "group_count": 11},
+    "paging": {"param": "page", "current": 2, "last": 2},
+    "is_end_of_paging": true,
+    "selected_filters": [{"name": "sales_form", "value": "1"}]
+  }
+}
