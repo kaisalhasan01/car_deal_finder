@@ -1,9 +1,13 @@
-"""Market-value estimation (the "car.info" step) — HYBRID strategy.
+"""LEGACY cohort-median valuer, kept as the baseline in analysis/evaluate_valuation.py.
 
-  1. car.info lookup by registration number (best-effort STUB, off by default —
-     car.info needs a regnr Blocket doesn't expose, and blocks bots).
-  2. Comparables fallback: the median price of the same brand+model+year cohort
-     from the listings themselves, adjusted for mileage. This drives the numbers.
+The production valuer is `pipeline/valuation.py` (hierarchical hedonic regression).
+This version pools all model years whenever a (brand, model, year) cohort has
+fewer than 3 prices, which biased discounts by age (HANDOFF §8.1).
+
+  1. car.info lookup by registration number (stub, off by default). Since 2025 Blocket
+     ads do carry `regno`, so a licensed valuation source can plug in here.
+  2. Comparables fallback: median price of the same brand+model+year cohort,
+     adjusted by a flat 1 kr/km.
 
 estimate() -> (value:int|None, method:'carinfo'|'comparables'|None)
 """

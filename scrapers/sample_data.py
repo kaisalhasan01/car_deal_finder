@@ -37,7 +37,10 @@ COLORS = ["Svart", "Vit", "Silver", "Blå", "Grå", "Röd"]
 
 
 def generate(n: int = 200, seed: int = 42, deal_share: float = 0.18) -> list[dict]:
+    """Synthetic listings. Fields prefixed `_` are hidden ground truth for evaluation
+    (`analysis/evaluate_valuation.py`) and are never loaded into the database."""
     rng = random.Random(seed)
+    extra = random.Random(seed + 1)   # separate stream: keeps the original 200 cars identical
     today = date.today()
     listings: list[dict] = []
 
@@ -53,21 +56,32 @@ def generate(n: int = 200, seed: int = 42, deal_share: float = 0.18) -> list[dic
         fair_value -= (mileage - age * 15_000) * 0.8
 
         price = fair_value * rng.uniform(0.95, 1.06)
-        if rng.random() < deal_share:                 # inject deliberate deals
+        injected = rng.random() < deal_share
+        if injected:                                  # inject deliberate deals
             price *= rng.uniform(0.80, 0.90)
 
         price = max(20_000, int(round(price / 1000) * 1000))
         city, county = rng.choice(LOCATIONS)
         listed = today - timedelta(days=rng.randint(0, 45))
+        gearbox, color = rng.choice(GEARBOXES), rng.choice(COLORS)
+        dealer = extra.random() < 0.3
 
         listings.append({
             "brand": brand, "model": model, "year": model_year,
             "mileage": mileage, "price": price,
             "city": city, "county": county,
             "fuel_type": None,            # the spec table is the authority for fuel/body/etc.
-            "gearbox": rng.choice(GEARBOXES), "color": rng.choice(COLORS),
+            "gearbox": gearbox, "color": color,
             "url": f"https://www.blocket.se/annons/sample-{i:05d}",
-            "listing_date": today, "days_on_market": (today - listed).days,
+            "ad_id": f"sample-{i:05d}",
+            "title": f"{brand} {model} {model_year} (exempeldata)",
+            "seller_type": "dealer" if dealer else "private",
+            "dealer_name": "Exempelbilar AB" if dealer else None,
+            "listing_date": listed,       # publish date; days on market derives from it
+            "days_on_market": (today - listed).days,
+            "source": "sample",
+            "_fair_value": round(fair_value),
+            "_injected_deal": injected,
         })
 
     return listings
