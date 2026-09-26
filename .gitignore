@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+
+# Project data
+*.db
+*.sqlite
+*.sqlite3
+debug/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Raw Blocket snapshots (re-playable, can be large)
+data/raw/
+
+# Power BI exports of real data (sample_data/ is committed for practice)
+powerbi/data/

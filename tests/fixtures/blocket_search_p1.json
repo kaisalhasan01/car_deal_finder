@@ -1,0 +1,110 @@
+{
+  "_fixture_note": "CONSTRUCTED fixture, not a captured live response. Field names follow the documented SEARCH_ID_CAR_USED schema (docs/BLOCKET_API.md). Replace with a real capture from `python -m scrapers.blocket --probe` when available.",
+  "docs": [
+    {
+      "type": "car", "id": "20101001", "ad_id": 20101001, "main_search_key": "SEARCH_ID_CAR_USED",
+      "heading": "Volvo V60 D4 AWD Momentum 190hk", "location": "Linköping",
+      "coordinates": {"lat": 58.41, "lon": 15.62},
+      "image": {"url": "https://images.blocketcdn.se/dynamic/default/item/20101001/a.jpg"},
+      "flags": ["private"], "timestamp": 1788048000000,
+      "canonical_url": "https://www.blocket.se/mobility/item/20101001",
+      "price": {"amount": 179900, "currency_code": "SEK", "price_unit": "kr"},
+      "year": 2018, "mileage": 12345, "make": "Volvo", "model": "V60",
+      "model_specification": "D4 AWD Momentum", "fuel": "Diesel", "transmission": "Automat",
+      "regno": "ABC 123", "dealer_segment": "Privat"
+    },
+    {
+      "type": "car", "id": "20101002", "ad_id": 20101002, "main_search_key": "SEARCH_ID_CAR_USED",
+      "heading": "Volkswagen Golf 1.5 TSI Style", "location": "Solna",
+      "coordinates": {"lat": 59.36, "lon": 18.0},
+      "image": {"url": "https://images.blocketcdn.se/dynamic/default/item/20101002/a.jpg"},
+      "flags": [], "timestamp": 1787443200000,
+      "canonical_url": "https://www.blocket.se/mobility/item/20101002",
+      "price": {"amount": 214900, "currency_code": "SEK", "price_unit": "kr"},
+      "year": 2021, "mileage": 4200, "make": "Volkswagen", "model": "Golf",
+      "model_specification": "1.5 TSI Style", "fuel": "Bensin", "transmission": "Automat",
+      "regno": "XWN11A", "dealer_segment": "Företag", "organisation_name": "Bilhallen Solna AB"
+    },
+    {
+      "type": "car", "id": "20101003", "ad_id": 20101003, "main_search_key": "SEARCH_ID_CAR_USED",
+      "heading": "Toyota Corolla Hybrid 1.8 Active", "location": "Åkersberga",
+      "coordinates": {"lat": 59.48, "lon": 18.3},
+      "timestamp": 1787961600000,
+      "canonical_url": "https://www.blocket.se/mobility/item/20101003",
+      "price": {"amount": 159000, "currency_code": "SEK", "price_unit": "kr"},
+      "year": 2020, "mileage": 6100, "make": "Toyota", "model": "Corolla",
+      "model_specification": "Hybrid 1.8 Active", "fuel": "Elhybrid", "transmission": "Automat",
+      "regno": "DEF456", "dealer_segment": "Privat"
+    },
+    {
+      "type": "car", "id": "20101004", "ad_id": 20101004, "main_search_key": "SEARCH_ID_CAR_USED",
+      "heading": "Tesla Model 3 Long Range Dual Motor", "location": "Göteborg",
+      "timestamp": 1787875200000,
+      "canonical_url": "https://www.blocket.se/mobility/item/20101004",
+      "price": {"amount": 289000, "currency_code": "SEK", "price_unit": "kr"},
+      "year": 2021, "mileage": 5600, "make": "Tesla", "model": "Model 3",
+      "model_specification": "Long Range Dual Motor", "fuel": "El", "transmission": "Automat",
+      "regno": "GHI78J", "dealer_segment": "Privat"
+    },
+    {
+      "type": "car", "id": "20101005", "ad_id": 20101005, "main_search_key": "SEARCH_ID_CAR_USED",
+      "heading": "BMW 320d xDrive Touring M Sport 190hk", "location": "Uppsala",
+      "timestamp": 1787788800000,
+      "canonical_url": "https://www.blocket.se/mobility/item/20101005",
+      "price": {"amount": 229000, "currency_code": "SEK", "price_unit": "kr"},
+      "year": 2019, "mileage": 9800, "make": "BMW", "model": "3-serie",
+      "model_specification": "320d xDrive Touring M Sport", "fuel": "Diesel",
+      "transmission": "Automat", "regno": "JKL012", "dealer_segment": "Privat"
+    },
+    {
+      "type": "car", "id": "20101006", "ad_id": 20101006, "main_search_key": "SEARCH_ID_CAR_USED",
+      "heading": "Kia Ceed 1.4 T-GDI Advance", "location": "Västerås",
+      "timestamp": 1787702400000,
+      "canonical_url": "https://www.blocket.se/mobility/item/20101006",
+      "price": {"amount": 139500, "currency_code": "SEK", "price_unit": "kr"},
+      "year": 2019, "mileage": 7300, "make": "Kia", "model": "Ceed",
+      "fuel": "Bensin", "transmission": "Manuell", "regno": "MNO345", "dealer_segment": "Privat"
+    },
+    {
+      "type": "car", "id": "20101007", "ad_id": 20101007, "main_search_key": "SEARCH_ID_CAR_USED",
+      "heading": "Volvo XC40 Recharge – privatleasing", "location": "Stockholm",
+      "timestamp": 1787616000000,
+      "canonical_url": "https://www.blocket.se/mobility/item/20101007",
+      "price": {"amount": 4995, "currency_code": "SEK", "price_unit": "kr/mån"},
+      "year": 2024, "mileage": 100, "make": "Volvo", "model": "XC40",
+      "fuel": "El", "transmission": "Automat", "dealer_segment": "Företag",
+      "organisation_name": "Volvo Car Retail"
+    },
+    {
+      "type": "car", "id": "20101008", "ad_id": 20101008, "main_search_key": "SEARCH_ID_CAR_USED",
+      "heading": "Saab 9-5 – ring för pris", "location": "Trollhättan",
+      "timestamp": 1787529600000,
+      "canonical_url": "https://www.blocket.se/mobility/item/20101008",
+      "price": {"amount": 1, "currency_code": "SEK", "price_unit": "kr"},
+      "year": 2008, "mileage": 31000, "make": "Saab", "model": "9-5",
+      "fuel": "Bensin", "transmission": "Automat", "dealer_segment": "Privat"
+    },
+    {
+      "type": "car", "id": "20101009", "ad_id": 20101009, "main_search_key": "SEARCH_ID_CAR_USED",
+      "heading": "Skoda Octavia Kombi", "location": "Malmö",
+      "timestamp": 1787443200000,
+      "canonical_url": "https://www.blocket.se/mobility/item/20101009",
+      "price": {"amount": 99000, "currency_code": "SEK", "price_unit": "kr"},
+      "mileage": 15500, "make": "Skoda", "model": "Octavia",
+      "fuel": "Diesel", "transmission": "Manuell", "dealer_segment": "Privat"
+    }
+  ],
+  "filters": [
+    {"display_name": "Märke", "name": "make", "type": "LIST", "items": [
+      {"display_name": "Volvo", "value": "0.818", "hits": 31250},
+      {"display_name": "Volkswagen", "value": "0.817", "hits": 21077}
+    ]}
+  ],
+  "metadata": {
+    "search_key": "SEARCH_ID_CAR_USED",
+    "result_size": {"match_count": 11, "group_count": 11},
+    "paging": {"param": "page", "current": 1, "last": 2},
+    "is_end_of_paging": false,
+    "selected_filters": [{"name": "sales_form", "value": "1"}, {"name": "sort", "value": "PUBLISHED_DESC"}]
+  }
+}

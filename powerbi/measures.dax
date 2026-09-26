@@ -1,0 +1,115 @@
+// ===========================================================================
+// Car Deal Finder — DAX measures for Power BI
+// ---------------------------------------------------------------------------
+// Paste each measure into a dedicated measures table (Home > Enter data > empty
+// table named "_Measures", then New measure). Assumes the model in
+// powerbi/README.md: fact_listings with dim_car / dim_location / dim_seller /
+// dim_date (active on first_seen_date_id), car_specs, fact_price_snapshots
+// with its own 'Snapshot Date' table, and listing_issues.
+// Format hints in [brackets] are what to set under Measure tools > Format.
+// ===========================================================================
+
+// --- Volume ------------------------------------------------------------------
+
+Listings = COUNTROWS ( fact_listings )
+
+Active Listings =
+CALCULATE ( COUNTROWS ( fact_listings ), fact_listings[is_active] = 1 )
+
+Removed Listings =   // gone from Blocket: sold or withdrawn, dated by last day seen
+CALCULATE (
+    COUNTROWS ( fact_listings ),
+    fact_listings[is_active] = 0,
+    USERELATIONSHIP ( fact_listings[last_seen_date_id], dim_date[date_id] )
+)
+
+New Listings (published) =   // dated by publish date instead of first-seen date
+CALCULATE (
+    COUNTROWS ( fact_listings ),
+    USERELATIONSHIP ( fact_listings[published_date_id], dim_date[date_id] )
+)
+
+// --- Price and value -----------------------------------------------------------
+
+Median Price = MEDIAN ( fact_listings[price_sek] )                        // [kr, 0 dp]
+
+Median Market Value = MEDIAN ( fact_listings[market_value_sek] )          // [kr, 0 dp]
+
+Avg Discount % = DIVIDE ( AVERAGE ( fact_listings[discount_pct] ), 100 )  // [Percentage, 1 dp]
+
+Value Gap (kr) =   // how much below estimated value the selection is priced, in total
+SUMX ( fact_listings, fact_listings[market_value_sek] - fact_listings[price_sek] )
+
+Median Mileage (mil) = DIVIDE ( MEDIAN ( fact_listings[mileage_km] ), 10 )
+
+Median Days on Market = MEDIAN ( fact_listings[days_on_market] )
+
+// --- Deals -----------------------------------------------------------------------
+
+Credible Deals =   // same rule as the advisor's deal board and vw_deal_board
+CALCULATE (
+    COUNTROWS ( fact_listings ),
+    fact_listings[is_active] = 1,
+    fact_listings[damage_flag] = 0,
+    fact_listings[discount_pct] >= 10,
+    fact_listings[value_confidence] IN { "high", "medium" }
+)
+
+Credible Deal Share = DIVIDE ( [Credible Deals], [Active Listings] )     // [Percentage]
+
+Deal Rank by Model =   // 1 = the model with most credible deals in the current selection
+RANKX ( ALLSELECTED ( dim_car[model] ), [Credible Deals], , DESC, DENSE )
+
+// --- Sellers ---------------------------------------------------------------------
+
+Dealer Share =
+DIVIDE (
+    CALCULATE ( [Active Listings], dim_seller[seller_type] = "dealer" ),
+    [Active Listings]
+)
+
+Dealer Price Premium % =   // dealer vs private discount gap (positive = dealers ask more)
+VAR PrivateDiscount = CALCULATE ( AVERAGE ( fact_listings[discount_pct] ), dim_seller[seller_type] = "private" )
+VAR DealerDiscount  = CALCULATE ( AVERAGE ( fact_listings[discount_pct] ), dim_seller[seller_type] = "dealer" )
+RETURN DIVIDE ( PrivateDiscount - DealerDiscount, 100 )
+
+// --- Price history (needs repeated ETL runs) ----------------------------------------
+
+Price Cut Listings =
+COUNTROWS (
+    FILTER ( fact_listings, fact_listings[price_sek] < fact_listings[first_price_sek] )
+)
+
+Avg Price Cut % =
+AVERAGEX (
+    FILTER ( fact_listings, fact_listings[price_sek] < fact_listings[first_price_sek] ),
+    DIVIDE ( fact_listings[first_price_sek] - fact_listings[price_sek], fact_listings[first_price_sek] )
+)
+
+Snapshot Median Price =   // market price level over time; slice by 'Snapshot Date'
+MEDIAN ( fact_price_snapshots[price_sek] )
+
+// --- Time intelligence (dim_date must be marked as date table) -----------------------
+
+New Listings 7d =
+CALCULATE (
+    [New Listings (published)],
+    DATESINPERIOD ( dim_date[date], MAX ( dim_date[date] ), -7, DAY )
+)
+
+New Listings WoW % =
+VAR ThisWeek = [New Listings 7d]
+VAR LastWeek = CALCULATE ( [New Listings 7d], DATEADD ( dim_date[date], -7, DAY ) )
+RETURN DIVIDE ( ThisWeek - LastWeek, LastWeek )
+
+// --- Buyer briefing ------------------------------------------------------------------
+
+Known-Issue Leverage (kr) = SUM ( listing_issues[negotiation_leverage_sek] )
+
+Avg Reliability = AVERAGE ( car_specs[reliability] )
+
+// --- Data freshness (card on every page) ----------------------------------------------
+
+Data Freshness =
+"Data uppdaterad " & LEFT ( MAX ( etl_runs[finished_at] ), 10 )
+    & " · " & FORMAT ( [Active Listings], "0" ) & " aktiva annonser"
