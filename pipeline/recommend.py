@@ -118,6 +118,10 @@ def _profile_summary(p: BuyerProfile) -> str:
 
 
 def main() -> None:
+    # Windows pipes default to cp1252, which cannot encode the emoji markers below.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+
     ap = argparse.ArgumentParser(description="Personalized car buyer advisor")
     ap.add_argument("--budget", type=int, default=220_000, help="max asking price (SEK)")
     ap.add_argument("--max-mileage", type=int, default=None, help="max mileage (km)")

@@ -59,6 +59,9 @@ source .venv/bin/activate           # Windows: .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
+> New machine or fresh session? Start with [`HANDOFF.md`](HANDOFF.md) (full context) —
+> [`CLAUDE.md`](CLAUDE.md) is the short version.
+
 ## Run it
 
 ```bash
@@ -114,6 +117,7 @@ python -m pipeline.run --source blocket-bd --query "volvo v60" --pages 2
 - [x] Insurance estimator calibrated to real Swedish premium data
 - [x] Real-data path via Bright Data Web Unlocker (`--source blocket-bd`) + probe tool
 - [ ] Run the probe and confirm Blocket `__NEXT_DATA__` field paths against live data
+- [ ] Let `recommend.py` read real listings from `car_deals.db` (today it only uses sample data)
 - [ ] Year/age-aware comparable valuation (current cohort fallback inflates discounts)
 - [ ] Power BI dashboard (.pbix) + optional interactive front-end (Streamlit)
 - [ ] Expand specs & known-issues coverage; migrate SQLite → PostgreSQL
