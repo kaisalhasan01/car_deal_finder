@@ -396,6 +396,10 @@ class HedonicValuer:
         return [{"age": age, "value": int(round(math.exp(self._typical_log(coef, age, km_per_year))))}
                 for age in ages]
 
+    def age_range(self) -> tuple[float, float] | None:
+        """Youngest and oldest age (years) the model has seen; outside is extrapolation."""
+        return (self._age_lo, self._age_hi) if self.fitted else None
+
     def attribute_effects(self) -> dict[str, float]:
         """Market-wide price effect of each attribute, in % (dealer premium etc.)."""
         if not self.fitted:

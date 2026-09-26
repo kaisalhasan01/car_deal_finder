@@ -33,6 +33,11 @@ LOCATIONS = [
     ("Umeå", "Västerbottens län"),
 ]
 
+# First model year sold in Sweden under that name (Model 3 deliveries began 2019; the
+# European Corolla hatchback replaced the Auris in 2019). Clamped, not re-drawn, so the
+# random stream (and every other car) stays identical.
+FIRST_YEAR = {("Tesla", "Model 3"): 2019, ("Toyota", "Corolla"): 2019}
+
 GEARBOXES = ["Manuell", "Automat"]
 COLORS = ["Svart", "Vit", "Silver", "Blå", "Grå", "Röd"]
 
@@ -52,7 +57,7 @@ def generate(n: int = 200, seed: int = 42, deal_share: float = 0.18,
 
     for i in range(n):
         brand, model, base_new, dep = rng.choice(MODELS)
-        model_year = rng.randint(2013, 2022)
+        model_year = max(rng.randint(2013, 2022), FIRST_YEAR.get((brand, model), 0))
         age = max(0, today.year - model_year)
 
         fair_value = base_new * (dep ** age)

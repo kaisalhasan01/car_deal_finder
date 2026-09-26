@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Bilrådgivaren (Streamlit)",
+      "runtimeExecutable": ".venv/Scripts/python.exe",
+      "runtimeArgs": ["-m", "streamlit", "run", "app/streamlit_app.py",
+                      "--server.port", "8501", "--server.headless", "true"],
+      "port": 8501
+    },
+    {
+      "name": "Car Deal Finder API (FastAPI)",
+      "runtimeExecutable": ".venv/Scripts/python.exe",
+      "runtimeArgs": ["-m", "uvicorn", "api.main:app", "--port", "8000"],
+      "port": 8000
+    }
+  ]
+}
