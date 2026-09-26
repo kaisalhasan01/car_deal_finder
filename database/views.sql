@@ -54,7 +54,10 @@ LEFT JOIN car_specs sp   ON sp.spec_id = f.spec_id
 JOIN known_issues ki     ON lower(ki.brand) = lower(COALESCE(sp.brand, c.brand))
                         AND lower(ki.model) = lower(COALESCE(sp.model, c.model))
                         AND (ki.year_from IS NULL OR c.model_year >= ki.year_from)
-                        AND (ki.year_to   IS NULL OR c.model_year <= ki.year_to);
+                        AND (ki.year_to   IS NULL OR c.model_year <= ki.year_to)
+                        -- engine-specific faults only for cars with a matching fuel
+                        AND (ki.applies_to_fuels IS NULL OR c.fuel_type = 'unknown'
+                             OR (',' || ki.applies_to_fuels || ',') LIKE ('%,' || c.fuel_type || ',%'));
 
 -- Daily price observations with labels --------------------------------------
 CREATE VIEW vw_price_history AS

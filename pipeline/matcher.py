@@ -181,7 +181,7 @@ def general_checks(listing: dict, attrs: dict) -> list[str]:
 
 def _build_briefing(listing: dict, attrs: dict) -> dict:
     brand, model, year = listing["brand"], listing["model"], listing["year"]
-    issues = sorted(get_issues(brand, model, year),
+    issues = sorted(get_issues(brand, model, year, fuel=listing.get("fuel_type")),
                     key=lambda it: SEVERITY_RANK.get(it.get("severity"), 0), reverse=True)
     leverage = sum(it.get("negotiation_leverage_sek") or 0 for it in issues)
 

@@ -1,0 +1,202 @@
+﻿listing_id,brand,model,model_year,price_sek,severity,category,engine,issue,what_to_check,negotiation_leverage_sek
+1,Volvo,XC60,2013,89000,medium,Motor,D-diesel,"EGR-kylare kan läcka (vit rök, kylvätskeförlust)",Kolla kylvätskenivå och vit rök vid kallstart. Fråga om EGR-kylare bytts.,10000
+2,Volvo,V60,2014,83000,medium,Motor,D-diesel,Partikelfilter (DPF) sätts igen vid mest stadskörning,Fråga om bilen mest körts kort-/stadssträcka. Be om felfri regenerering och kolla DPF-status.,12000
+3,Skoda,Octavia,2019,102000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+3,Skoda,Octavia,2019,102000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+4,Volkswagen,Passat,2018,96000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+6,Volvo,XC60,2013,98000,medium,Motor,D-diesel,"EGR-kylare kan läcka (vit rök, kylvätskeförlust)",Kolla kylvätskenivå och vit rök vid kallstart. Fråga om EGR-kylare bytts.,10000
+9,Volkswagen,Passat,2013,48000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+10,Kia,Ceed,2015,43000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+11,Tesla,Model 3,2019,167000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+11,Tesla,Model 3,2019,167000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+12,Volvo,XC60,2015,141000,medium,Motor,D-diesel,"EGR-kylare kan läcka (vit rök, kylvätskeförlust)",Kolla kylvätskenivå och vit rök vid kallstart. Fråga om EGR-kylare bytts.,10000
+13,Toyota,Corolla,2022,180000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+14,Skoda,Octavia,2017,89000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+14,Skoda,Octavia,2017,89000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+15,Volvo,V60,2017,94000,medium,Motor,T5/T6 Drive-E bensin,Oljeförbrukning på vissa bensinmotorer (kolvringar),Fråga om oljeförbrukning och om åtgärd gjorts. Kolla oljenivån.,15000
+16,BMW,3-serie,2015,100000,high,Motor,N20 bensin,Kamkedjans styrningar kan slitas (N20 2.0 bensin),Lyssna efter visslande/rasslande ljud. Fråga om kedjesats bytts.,20000
+17,Volvo,V60,2014,76000,medium,Motor,D-diesel,Partikelfilter (DPF) sätts igen vid mest stadskörning,Fråga om bilen mest körts kort-/stadssträcka. Be om felfri regenerering och kolla DPF-status.,12000
+18,Kia,Ceed,2014,40000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+22,BMW,3-serie,2014,87000,high,Motor,N47 diesel,Kamkedja kan sträckas/haverera (sitter baktill på motorn),Lyssna efter rassel/skrammel från kamkedjan vid kallstart. Dyrt jobb då kedjan sitter mot växellådan.,25000
+22,BMW,3-serie,2014,87000,high,Motor,N20 bensin,Kamkedjans styrningar kan slitas (N20 2.0 bensin),Lyssna efter visslande/rasslande ljud. Fråga om kedjesats bytts.,20000
+23,Tesla,Model 3,2022,337000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+24,Toyota,Corolla,2019,132000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+25,BMW,3-serie,2014,85000,high,Motor,N47 diesel,Kamkedja kan sträckas/haverera (sitter baktill på motorn),Lyssna efter rassel/skrammel från kamkedjan vid kallstart. Dyrt jobb då kedjan sitter mot växellådan.,25000
+25,BMW,3-serie,2014,85000,high,Motor,N20 bensin,Kamkedjans styrningar kan slitas (N20 2.0 bensin),Lyssna efter visslande/rasslande ljud. Fråga om kedjesats bytts.,20000
+28,Toyota,Corolla,2021,168000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+29,Tesla,Model 3,2021,226000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+29,Tesla,Model 3,2021,226000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+30,Volvo,XC60,2015,111000,medium,Motor,D-diesel,"EGR-kylare kan läcka (vit rök, kylvätskeförlust)",Kolla kylvätskenivå och vit rök vid kallstart. Fråga om EGR-kylare bytts.,10000
+31,Tesla,Model 3,2019,191000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+31,Tesla,Model 3,2019,191000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+34,Volkswagen,Passat,2018,106000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+35,Skoda,Octavia,2013,48000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+35,Skoda,Octavia,2013,48000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+35,Skoda,Octavia,2013,48000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+36,Skoda,Octavia,2015,68000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+36,Skoda,Octavia,2015,68000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+36,Skoda,Octavia,2015,68000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+37,Kia,Ceed,2017,51000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+39,Volvo,XC60,2015,122000,medium,Motor,D-diesel,"EGR-kylare kan läcka (vit rök, kylvätskeförlust)",Kolla kylvätskenivå och vit rök vid kallstart. Fråga om EGR-kylare bytts.,10000
+40,Volkswagen,Passat,2016,84000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+41,Volkswagen,Golf,2015,56000,medium,Växellåda,DSG (DQ200),DSG-mekatronik/koppling kan strula,Provkör för ryck eller glapp vid växling. Fråga om DSG-oljebyte gjorts (~var 6:e år).,15000
+41,Volkswagen,Golf,2015,56000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+42,Volkswagen,Golf,2014,40000,medium,Växellåda,DSG (DQ200),DSG-mekatronik/koppling kan strula,Provkör för ryck eller glapp vid växling. Fråga om DSG-oljebyte gjorts (~var 6:e år).,15000
+42,Volkswagen,Golf,2014,40000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+43,Volkswagen,Passat,2016,76000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+44,Skoda,Octavia,2018,92000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+44,Skoda,Octavia,2018,92000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+46,Volkswagen,Passat,2017,85000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+47,Toyota,Corolla,2019,120000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+48,Toyota,Corolla,2019,139000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+49,Toyota,Corolla,2019,116000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+52,Volvo,V60,2016,102000,medium,Motor,T5/T6 Drive-E bensin,Oljeförbrukning på vissa bensinmotorer (kolvringar),Fråga om oljeförbrukning och om åtgärd gjorts. Kolla oljenivån.,15000
+53,Tesla,Model 3,2019,157000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+53,Tesla,Model 3,2019,157000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+54,Skoda,Octavia,2020,132000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+54,Skoda,Octavia,2020,132000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+57,Volkswagen,Passat,2017,99000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+58,Volkswagen,Passat,2019,124000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+59,Skoda,Octavia,2020,134000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+59,Skoda,Octavia,2020,134000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+60,Volvo,V60,2018,132000,medium,Motor,T5/T6 Drive-E bensin,Oljeförbrukning på vissa bensinmotorer (kolvringar),Fråga om oljeförbrukning och om åtgärd gjorts. Kolla oljenivån.,15000
+61,Volkswagen,Passat,2017,93000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+62,Tesla,Model 3,2021,235000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+62,Tesla,Model 3,2021,235000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+63,Kia,Ceed,2015,39000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+65,Volvo,V60,2013,54000,medium,Motor,D-diesel,Partikelfilter (DPF) sätts igen vid mest stadskörning,Fråga om bilen mest körts kort-/stadssträcka. Be om felfri regenerering och kolla DPF-status.,12000
+67,Tesla,Model 3,2019,176000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+67,Tesla,Model 3,2019,176000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+69,BMW,3-serie,2014,93000,high,Motor,N47 diesel,Kamkedja kan sträckas/haverera (sitter baktill på motorn),Lyssna efter rassel/skrammel från kamkedjan vid kallstart. Dyrt jobb då kedjan sitter mot växellådan.,25000
+69,BMW,3-serie,2014,93000,high,Motor,N20 bensin,Kamkedjans styrningar kan slitas (N20 2.0 bensin),Lyssna efter visslande/rasslande ljud. Fråga om kedjesats bytts.,20000
+70,Kia,Ceed,2015,42000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+71,Toyota,Corolla,2022,172000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+74,Skoda,Octavia,2016,80000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+74,Skoda,Octavia,2016,80000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+76,Skoda,Octavia,2018,95000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+76,Skoda,Octavia,2018,95000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+77,Volkswagen,Passat,2018,105000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+78,Tesla,Model 3,2021,240000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+78,Tesla,Model 3,2021,240000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+80,Kia,Ceed,2014,37000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+81,Volkswagen,Golf,2013,33000,high,Motor,1.4 TSI (EA111),Kamkedjesträckare kan haverera → motorskada,Kolla att uppdaterad sträckare monterats. Lyssna efter rassel vid kallstart/varv.,20000
+81,Volkswagen,Golf,2013,33000,medium,Växellåda,DSG (DQ200),DSG-mekatronik/koppling kan strula,Provkör för ryck eller glapp vid växling. Fråga om DSG-oljebyte gjorts (~var 6:e år).,15000
+81,Volkswagen,Golf,2013,33000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+82,Audi,A4,2014,64000,medium,Motor,,Kamkedjesträckare kan slitas (rassel vid kallstart),Lyssna efter rassel de första sekunderna vid kallstart. Fråga om uppdaterad sträckare monterats.,12000
+83,Kia,Ceed,2017,51000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+84,Volvo,XC60,2015,150000,medium,Motor,D-diesel,"EGR-kylare kan läcka (vit rök, kylvätskeförlust)",Kolla kylvätskenivå och vit rök vid kallstart. Fråga om EGR-kylare bytts.,10000
+85,Tesla,Model 3,2020,220000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+85,Tesla,Model 3,2020,220000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+86,Tesla,Model 3,2019,172000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+86,Tesla,Model 3,2019,172000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+87,Volvo,V60,2015,95000,medium,Motor,D-diesel,Partikelfilter (DPF) sätts igen vid mest stadskörning,Fråga om bilen mest körts kort-/stadssträcka. Be om felfri regenerering och kolla DPF-status.,12000
+87,Volvo,V60,2015,95000,medium,Motor,T5/T6 Drive-E bensin,Oljeförbrukning på vissa bensinmotorer (kolvringar),Fråga om oljeförbrukning och om åtgärd gjorts. Kolla oljenivån.,15000
+90,Volvo,V60,2015,101000,medium,Motor,D-diesel,Partikelfilter (DPF) sätts igen vid mest stadskörning,Fråga om bilen mest körts kort-/stadssträcka. Be om felfri regenerering och kolla DPF-status.,12000
+90,Volvo,V60,2015,101000,medium,Motor,T5/T6 Drive-E bensin,Oljeförbrukning på vissa bensinmotorer (kolvringar),Fråga om oljeförbrukning och om åtgärd gjorts. Kolla oljenivån.,15000
+91,Kia,Ceed,2014,30000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+92,Toyota,Corolla,2021,129000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+93,Skoda,Octavia,2020,133000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+93,Skoda,Octavia,2020,133000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+94,Skoda,Octavia,2015,67000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+94,Skoda,Octavia,2015,67000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+94,Skoda,Octavia,2015,67000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+95,Tesla,Model 3,2019,173000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+95,Tesla,Model 3,2019,173000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+97,Volkswagen,Passat,2020,162000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+99,Kia,Ceed,2018,71000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+100,Toyota,Corolla,2019,128000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+102,Kia,Ceed,2013,31000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+105,Volvo,XC60,2014,119000,medium,Motor,D-diesel,"EGR-kylare kan läcka (vit rök, kylvätskeförlust)",Kolla kylvätskenivå och vit rök vid kallstart. Fråga om EGR-kylare bytts.,10000
+106,Volkswagen,Golf,2016,63000,medium,Växellåda,DSG (DQ200),DSG-mekatronik/koppling kan strula,Provkör för ryck eller glapp vid växling. Fråga om DSG-oljebyte gjorts (~var 6:e år).,15000
+107,Tesla,Model 3,2019,165000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+107,Tesla,Model 3,2019,165000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+109,Tesla,Model 3,2019,183000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+109,Tesla,Model 3,2019,183000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+110,Volkswagen,Passat,2019,133000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+113,Volvo,V60,2017,106000,medium,Motor,T5/T6 Drive-E bensin,Oljeförbrukning på vissa bensinmotorer (kolvringar),Fråga om oljeförbrukning och om åtgärd gjorts. Kolla oljenivån.,15000
+115,Kia,Ceed,2017,56000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+116,BMW,3-serie,2014,79000,high,Motor,N47 diesel,Kamkedja kan sträckas/haverera (sitter baktill på motorn),Lyssna efter rassel/skrammel från kamkedjan vid kallstart. Dyrt jobb då kedjan sitter mot växellådan.,25000
+116,BMW,3-serie,2014,79000,high,Motor,N20 bensin,Kamkedjans styrningar kan slitas (N20 2.0 bensin),Lyssna efter visslande/rasslande ljud. Fråga om kedjesats bytts.,20000
+117,Toyota,Corolla,2019,123000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+119,Volvo,V60,2017,114000,medium,Motor,T5/T6 Drive-E bensin,Oljeförbrukning på vissa bensinmotorer (kolvringar),Fråga om oljeförbrukning och om åtgärd gjorts. Kolla oljenivån.,15000
+120,Skoda,Octavia,2019,115000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+120,Skoda,Octavia,2019,115000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+121,Tesla,Model 3,2019,176000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+121,Tesla,Model 3,2019,176000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+124,Tesla,Model 3,2019,168000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+124,Tesla,Model 3,2019,168000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+125,BMW,3-serie,2015,94000,high,Motor,N20 bensin,Kamkedjans styrningar kan slitas (N20 2.0 bensin),Lyssna efter visslande/rasslande ljud. Fråga om kedjesats bytts.,20000
+126,Volvo,XC60,2013,110000,medium,Motor,D-diesel,"EGR-kylare kan läcka (vit rök, kylvätskeförlust)",Kolla kylvätskenivå och vit rök vid kallstart. Fråga om EGR-kylare bytts.,10000
+128,Tesla,Model 3,2019,174000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+128,Tesla,Model 3,2019,174000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+129,Volvo,V60,2013,56000,medium,Motor,D-diesel,Partikelfilter (DPF) sätts igen vid mest stadskörning,Fråga om bilen mest körts kort-/stadssträcka. Be om felfri regenerering och kolla DPF-status.,12000
+130,Tesla,Model 3,2019,172000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+130,Tesla,Model 3,2019,172000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+131,Tesla,Model 3,2021,253000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+131,Tesla,Model 3,2021,253000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+132,Kia,Ceed,2016,46000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+133,Toyota,Corolla,2019,133000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+134,Toyota,Corolla,2019,145000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+138,Audi,A4,2013,68000,medium,Motor,,Kamkedjesträckare kan slitas (rassel vid kallstart),Lyssna efter rassel de första sekunderna vid kallstart. Fråga om uppdaterad sträckare monterats.,12000
+139,Volkswagen,Golf,2015,56000,medium,Växellåda,DSG (DQ200),DSG-mekatronik/koppling kan strula,Provkör för ryck eller glapp vid växling. Fråga om DSG-oljebyte gjorts (~var 6:e år).,15000
+139,Volkswagen,Golf,2015,56000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+140,Toyota,Corolla,2020,151000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+141,Volkswagen,Golf,2015,53000,medium,Växellåda,DSG (DQ200),DSG-mekatronik/koppling kan strula,Provkör för ryck eller glapp vid växling. Fråga om DSG-oljebyte gjorts (~var 6:e år).,15000
+141,Volkswagen,Golf,2015,53000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+143,Audi,A4,2013,62000,medium,Motor,,Kamkedjesträckare kan slitas (rassel vid kallstart),Lyssna efter rassel de första sekunderna vid kallstart. Fråga om uppdaterad sträckare monterats.,12000
+144,BMW,3-serie,2014,68000,high,Motor,N47 diesel,Kamkedja kan sträckas/haverera (sitter baktill på motorn),Lyssna efter rassel/skrammel från kamkedjan vid kallstart. Dyrt jobb då kedjan sitter mot växellådan.,25000
+144,BMW,3-serie,2014,68000,high,Motor,N20 bensin,Kamkedjans styrningar kan slitas (N20 2.0 bensin),Lyssna efter visslande/rasslande ljud. Fråga om kedjesats bytts.,20000
+145,Volkswagen,Passat,2021,182000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+147,Volvo,V60,2018,128000,medium,Motor,T5/T6 Drive-E bensin,Oljeförbrukning på vissa bensinmotorer (kolvringar),Fråga om oljeförbrukning och om åtgärd gjorts. Kolla oljenivån.,15000
+148,Volkswagen,Passat,2019,112000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+149,BMW,3-serie,2015,91000,high,Motor,N20 bensin,Kamkedjans styrningar kan slitas (N20 2.0 bensin),Lyssna efter visslande/rasslande ljud. Fråga om kedjesats bytts.,20000
+150,Volvo,XC60,2015,102000,medium,Motor,D-diesel,"EGR-kylare kan läcka (vit rök, kylvätskeförlust)",Kolla kylvätskenivå och vit rök vid kallstart. Fråga om EGR-kylare bytts.,10000
+151,Tesla,Model 3,2022,337000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+152,Kia,Ceed,2014,34000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+153,Skoda,Octavia,2014,55000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+153,Skoda,Octavia,2014,55000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+153,Skoda,Octavia,2014,55000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+154,Tesla,Model 3,2021,232000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+154,Tesla,Model 3,2021,232000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+155,Tesla,Model 3,2020,246000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+155,Tesla,Model 3,2020,246000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+156,Volkswagen,Golf,2013,40000,high,Motor,1.4 TSI (EA111),Kamkedjesträckare kan haverera → motorskada,Kolla att uppdaterad sträckare monterats. Lyssna efter rassel vid kallstart/varv.,20000
+156,Volkswagen,Golf,2013,40000,medium,Växellåda,DSG (DQ200),DSG-mekatronik/koppling kan strula,Provkör för ryck eller glapp vid växling. Fråga om DSG-oljebyte gjorts (~var 6:e år).,15000
+156,Volkswagen,Golf,2013,40000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+158,Skoda,Octavia,2019,104000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+158,Skoda,Octavia,2019,104000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+160,BMW,3-serie,2015,92000,high,Motor,N20 bensin,Kamkedjans styrningar kan slitas (N20 2.0 bensin),Lyssna efter visslande/rasslande ljud. Fråga om kedjesats bytts.,20000
+161,BMW,3-serie,2013,73000,high,Motor,N47 diesel,Kamkedja kan sträckas/haverera (sitter baktill på motorn),Lyssna efter rassel/skrammel från kamkedjan vid kallstart. Dyrt jobb då kedjan sitter mot växellådan.,25000
+161,BMW,3-serie,2013,73000,high,Motor,N20 bensin,Kamkedjans styrningar kan slitas (N20 2.0 bensin),Lyssna efter visslande/rasslande ljud. Fråga om kedjesats bytts.,20000
+162,Volkswagen,Golf,2014,45000,medium,Växellåda,DSG (DQ200),DSG-mekatronik/koppling kan strula,Provkör för ryck eller glapp vid växling. Fråga om DSG-oljebyte gjorts (~var 6:e år).,15000
+162,Volkswagen,Golf,2014,45000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+165,Kia,Ceed,2016,57000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+166,Volkswagen,Passat,2022,171000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+167,Skoda,Octavia,2014,57000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+167,Skoda,Octavia,2014,57000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+167,Skoda,Octavia,2014,57000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+168,Kia,Ceed,2018,65000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+169,Toyota,Corolla,2019,142000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+171,Volvo,V60,2017,126000,medium,Motor,T5/T6 Drive-E bensin,Oljeförbrukning på vissa bensinmotorer (kolvringar),Fråga om oljeförbrukning och om åtgärd gjorts. Kolla oljenivån.,15000
+172,Audi,A4,2014,71000,medium,Motor,,Kamkedjesträckare kan slitas (rassel vid kallstart),Lyssna efter rassel de första sekunderna vid kallstart. Fråga om uppdaterad sträckare monterats.,12000
+173,Tesla,Model 3,2021,190000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+173,Tesla,Model 3,2021,190000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+175,Kia,Ceed,2013,29000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+176,BMW,3-serie,2015,105000,high,Motor,N20 bensin,Kamkedjans styrningar kan slitas (N20 2.0 bensin),Lyssna efter visslande/rasslande ljud. Fråga om kedjesats bytts.,20000
+177,Kia,Ceed,2015,43000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+178,Volvo,V60,2018,147000,medium,Motor,T5/T6 Drive-E bensin,Oljeförbrukning på vissa bensinmotorer (kolvringar),Fråga om oljeförbrukning och om åtgärd gjorts. Kolla oljenivån.,15000
+179,Volkswagen,Passat,2017,103000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+181,Toyota,Corolla,2019,155000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+183,Kia,Ceed,2013,31000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+184,Skoda,Octavia,2015,67000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+184,Skoda,Octavia,2015,67000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+184,Skoda,Octavia,2015,67000,low,Motor,2.0/1.6 TDI (EA189),Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000
+185,Volkswagen,Passat,2018,95000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000
+186,Tesla,Model 3,2019,162000,low,Chassi,,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000
+186,Tesla,Model 3,2019,162000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+188,Kia,Ceed,2016,48000,low,Motor,,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000
+190,Skoda,Octavia,2016,77000,medium,Motor,1.4/1.8 TSI,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000
+190,Skoda,Octavia,2016,77000,medium,Växellåda,DSG (DQ200),DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000
+194,Toyota,Corolla,2021,139000,low,El/Hybrid,Hybrid,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000
+197,Tesla,Model 3,2022,300000,low,El,,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000
+198,Volkswagen,Passat,2022,175000,medium,Motor,2.0 TDI,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000

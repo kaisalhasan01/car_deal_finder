@@ -1,0 +1,48 @@
+﻿issue_id,brand,model,year_from,year_to,engine,category,severity,issue,what_to_check,negotiation_leverage_sek,applies_to_fuels
+1,Audi,A4,2008,2012,2.0 TFSI,Motor,high,Hög oljeförbrukning (slitna kolvringar/oljeavskiljare),Be om servicebok och oljeförbruknings-historik. Kolla om kolvringar/block åtgärdats enligt Audis bulletin. Mät oljenivå.,15000,"Bensin,Hybrid,Laddhybrid"
+2,Audi,A4,2008,2015,,Motor,medium,Kamkedjesträckare kan slitas (rassel vid kallstart),Lyssna efter rassel de första sekunderna vid kallstart. Fråga om uppdaterad sträckare monterats.,12000,
+3,BMW,3-serie,2007,2014,N47 diesel,Motor,high,Kamkedja kan sträckas/haverera (sitter baktill på motorn),Lyssna efter rassel/skrammel från kamkedjan vid kallstart. Dyrt jobb då kedjan sitter mot växellådan.,25000,Diesel
+4,Volvo,V60,2010,2015,D-diesel,Motor,medium,Partikelfilter (DPF) sätts igen vid mest stadskörning,Fråga om bilen mest körts kort-/stadssträcka. Be om felfri regenerering och kolla DPF-status.,12000,Diesel
+5,Volvo,XC60,2009,2017,D-diesel,Motor,medium,"EGR-kylare kan läcka (vit rök, kylvätskeförlust)",Kolla kylvätskenivå och vit rök vid kallstart. Fråga om EGR-kylare bytts.,10000,Diesel
+6,Volkswagen,Golf,2008,2013,1.4 TSI (EA111),Motor,high,Kamkedjesträckare kan haverera → motorskada,Kolla att uppdaterad sträckare monterats. Lyssna efter rassel vid kallstart/varv.,20000,"Bensin,Hybrid,Laddhybrid"
+7,Volkswagen,Golf,2008,2016,DSG (DQ200),Växellåda,medium,DSG-mekatronik/koppling kan strula,Provkör för ryck eller glapp vid växling. Fråga om DSG-oljebyte gjorts (~var 6:e år).,15000,
+8,Skoda,Octavia,2013,2020,1.4/1.8 TSI,Motor,medium,Oljeförbrukning på vissa TSI-årsmodeller,Mät oljenivå mellan servicar. Fråga om kolvringsåtgärd gjorts.,12000,"Bensin,Hybrid,Laddhybrid"
+9,Skoda,Octavia,2013,2020,DSG (DQ200),Växellåda,medium,DSG-mekatronik kan ge ryckiga växlingar,Provkör i låga farter. Fråga om DSG-service.,15000,
+10,Volkswagen,Passat,2015,2023,2.0 TDI,Motor,medium,AdBlue/SCR och DPF kan ge dyra fel,Kontrollera felfri AdBlue-doserare och DPF-status. Kolla felkoder.,12000,Diesel
+11,Toyota,Corolla,2013,2022,Hybrid,El/Hybrid,low,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos Toyota. I övrigt mycket pålitlig modell.,8000,"Hybrid,Laddhybrid"
+12,Kia,Ceed,2012,2018,,Motor,low,Kamrem-/kamkedjeintervall på vissa motorer,Fråga om kamrem bytts enligt intervall. Kolla att nybilsgarantin (7 år) ev. gäller.,7000,
+13,Tesla,Model 3,2019,2021,,Chassi,low,Tidiga ex: länkarmar/bussningar kan slamra fram,Lyssna efter slammer fram på ojämn väg. Fråga om länkarmar bytts på garanti.,6000,
+14,Tesla,Model 3,2019,2022,,El,low,12V-batteri och skärm/MCU kan behöva åtgärd; ojämnt däckslitage,"Kontrollera skärm och mjukvaruversion, 12V-batteristatus och däckslitage/hjulinställning.",5000,
+15,Peugeot,308,2014,2022,1.2 PureTech (EB2),Motor,high,"Kamremmen går i olja och kan brytas ned → skräp i oljesystemet, motorskada",Fråga när kamremmen senast byttes (tillverkaren har kortat intervallet). Kolla oljeförbrukning och att inga varningslampor lyst. Begär kvitto.,15000,"Bensin,Hybrid,Laddhybrid"
+16,Peugeot,3008,2016,2022,1.2 PureTech (EB2),Motor,high,"Kamremmen går i olja och kan brytas ned → skräp i oljesystemet, motorskada",Fråga när kamremmen senast byttes (tillverkaren har kortat intervallet). Kolla oljeförbrukning och att inga varningslampor lyst. Begär kvitto.,15000,"Bensin,Hybrid,Laddhybrid"
+17,Peugeot,208,2014,2022,1.2 PureTech (EB2),Motor,high,"Kamremmen går i olja och kan brytas ned → skräp i oljesystemet, motorskada",Fråga när kamremmen senast byttes (tillverkaren har kortat intervallet). Kolla oljeförbrukning och att inga varningslampor lyst. Begär kvitto.,15000,"Bensin,Hybrid,Laddhybrid"
+18,Ford,Focus,2012,2018,1.0 EcoBoost,Motor,high,Kylvätskeläckage/överhettning kan skada topplocket,Kontrollera kylvätskenivån och fråga om kylslangar/termostat åtgärdats. Undvik bilar som gått varma. Be om servicehistorik.,15000,"Bensin,Hybrid,Laddhybrid"
+19,Ford,Fiesta,2012,2018,1.0 EcoBoost,Motor,high,Kylvätskeläckage/överhettning kan skada topplocket,Kontrollera kylvätskenivån och fråga om kylslangar/termostat åtgärdats. Undvik bilar som gått varma. Be om servicehistorik.,15000,"Bensin,Hybrid,Laddhybrid"
+20,Ford,Focus,2011,2016,PowerShift (DPS6),Växellåda,medium,PowerShift-automatlåda kan rycka/slira (torrkoppling),Provkör i stadstrafik: skakningar vid start? Fråga om kopplingsbyte/programvara.,12000,
+21,BMW,3-serie,2012,2015,N20 bensin,Motor,high,Kamkedjans styrningar kan slitas (N20 2.0 bensin),Lyssna efter visslande/rasslande ljud. Fråga om kedjesats bytts.,20000,"Bensin,Hybrid,Laddhybrid"
+22,BMW,X1,2009,2014,N47 diesel,Motor,high,Kamkedja kan sträckas/haverera (sitter baktill på motorn),Lyssna efter rassel vid kallstart. Fråga om kedjan bytts.,25000,Diesel
+23,BMW,X3,2010,2014,N47 diesel,Motor,high,Kamkedja kan sträckas/haverera (sitter baktill på motorn),Lyssna efter rassel vid kallstart. Fråga om kedjan bytts.,25000,Diesel
+24,BMW,5-serie,2010,2014,N47 diesel,Motor,high,Kamkedja kan sträckas/haverera (sitter baktill på motorn),Lyssna efter rassel vid kallstart. Fråga om kedjan bytts.,25000,Diesel
+25,Nissan,Leaf,2011,2017,,El/Batteri,high,Batterikapaciteten minskar (ingen aktiv batterikylning) → kortare räckvidd,Be om batterihälsa (SOH) från verkstad eller app. Räkna kapacitetsstaplarna.,30000,
+26,Mitsubishi,Outlander,2013,2020,PHEV,El/Batteri,medium,Batterikapacitet och elräckvidd sjunker med åren,Ladda fullt och kontrollera elräckvidden. Be om batteritest.,15000,Laddhybrid
+27,Volvo,XC90,2015,2018,T5/T6 Drive-E bensin,Motor,medium,Oljeförbrukning på vissa bensinmotorer (kolvringar),Fråga om oljeförbrukning och om åtgärd gjorts. Kolla oljenivån.,15000,"Bensin,Hybrid,Laddhybrid"
+28,Volvo,V60,2015,2018,T5/T6 Drive-E bensin,Motor,medium,Oljeförbrukning på vissa bensinmotorer (kolvringar),Fråga om oljeförbrukning och om åtgärd gjorts. Kolla oljenivån.,15000,"Bensin,Hybrid,Laddhybrid"
+29,Volkswagen,Passat,2009,2015,2.0/1.6 TDI (EA189),Motor,low,Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000,Diesel
+30,Volkswagen,Golf,2009,2015,2.0/1.6 TDI (EA189),Motor,low,Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000,Diesel
+31,Volkswagen,Tiguan,2009,2015,2.0/1.6 TDI (EA189),Motor,low,Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000,Diesel
+32,Skoda,Octavia,2009,2015,2.0/1.6 TDI (EA189),Motor,low,Dieselgate-uppdatering: vissa får EGR/DPF-problem efter mjukvaruåtgärden,Kontrollera att åtgärden gjorts och fråga om EGR-/DPF-historik efteråt.,8000,Diesel
+33,Volkswagen,Polo,2010,2016,DSG (DQ200),Växellåda,medium,DSG-mekatronik/koppling kan strula,Provkör i låga farter och kö: ryck eller glapp vid växling? Fråga om DSG-service.,15000,
+34,Audi,A3,2008,2016,DSG (DQ200),Växellåda,medium,DSG-mekatronik/koppling kan strula,Provkör i låga farter och kö: ryck eller glapp vid växling? Fråga om DSG-service.,15000,
+35,Seat,Leon,2008,2016,DSG (DQ200),Växellåda,medium,DSG-mekatronik/koppling kan strula,Provkör i låga farter och kö: ryck eller glapp vid växling? Fråga om DSG-service.,15000,
+36,Mercedes-Benz,C-Klass,2008,2015,OM651 diesel,Motor,medium,Insprutare och kamkedja kan ge problem (OM651),Ojämn tomgång eller rassel vid kallstart? Fråga om insprutare bytts.,15000,Diesel
+37,Mercedes-Benz,E-Klass,2009,2015,OM651 diesel,Motor,medium,Insprutare och kamkedja kan ge problem (OM651),Ojämn tomgång eller rassel vid kallstart? Fråga om insprutare bytts.,15000,Diesel
+38,Renault,Clio,2012,2016,1.2 TCe (H5Ft),Motor,high,Oljeförbrukning kan leda till motorskada (1.2 TCe),"Mät oljenivån, fråga om oljeförbrukning och tillverkarens åtgärd.",20000,"Bensin,Hybrid,Laddhybrid"
+39,Renault,Captur,2013,2016,1.2 TCe (H5Ft),Motor,high,Oljeförbrukning kan leda till motorskada (1.2 TCe),"Mät oljenivån, fråga om oljeförbrukning och tillverkarens åtgärd.",20000,"Bensin,Hybrid,Laddhybrid"
+40,Nissan,Qashqai,2014,2017,1.2 DIG-T,Motor,medium,Oljeförbrukning/kamkedja på 1.2 DIG-T,"Kolla oljenivå, lyssna efter kedjerassel vid kallstart.",12000,"Bensin,Hybrid,Laddhybrid"
+41,Mazda,6,2012,2017,2.2 Skyactiv-D,Motor,medium,Oljeutspädning och sotning vid mycket kortkörning (2.2 diesel),Oljenivå som stiger är varningstecken. Fråga om körmönster och DPF.,12000,Diesel
+42,Mazda,CX-5,2012,2017,2.2 Skyactiv-D,Motor,medium,Oljeutspädning och sotning vid mycket kortkörning (2.2 diesel),Oljenivå som stiger är varningstecken. Fråga om körmönster och DPF.,12000,Diesel
+43,Hyundai,Kona,2018,2020,Electric,El/Batteri,medium,Återkallelse av batteripaket på Kona Electric (brandrisk),Kontrollera hos märkesverkstad att återkallelsen är åtgärdad.,5000,El
+44,Tesla,Model S,2012,2018,,El,medium,Skärmens minne (MCU/eMMC) kan haverera; dörrhandtag kan krångla,Kontrollera att skärmen är snabb och att MCU-åtgärd gjorts. Testa alla handtag.,10000,
+45,Audi,Q5,2008,2012,2.0 TFSI,Motor,high,Hög oljeförbrukning (slitna kolvringar) på 2.0 TFSI,Be om oljeförbruknings-historik och om kolvringsåtgärd gjorts.,15000,"Bensin,Hybrid,Laddhybrid"
+46,Toyota,Auris,2010,2018,Hybrid,El/Hybrid,low,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos märkesverkstad. I övrigt mycket pålitlig.,8000,"Hybrid,Laddhybrid"
+47,Toyota,Prius,2004,2015,Hybrid,El/Hybrid,low,Hybridbatteriets hälsa på äldre exemplar,Be om hybridbatteri-hälsotest hos märkesverkstad. I övrigt mycket pålitlig.,8000,"Hybrid,Laddhybrid"

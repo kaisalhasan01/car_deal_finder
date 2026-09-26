@@ -21,3 +21,6 @@ debug/
 
 # Raw Blocket snapshots (re-playable, can be large)
 data/raw/
+
+# Power BI exports of real data (sample_data/ is committed for practice)
+powerbi/data/

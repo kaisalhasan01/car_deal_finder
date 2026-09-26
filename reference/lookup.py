@@ -81,8 +81,30 @@ def spec_key(spec: dict | None) -> tuple[str, str, str] | None:
     return spec["brand"].lower(), spec["model"].lower(), spec["primary_fuel"]
 
 
-def get_issues(brand: str, model: str, year: int | None = None) -> list[dict]:
-    """Known issues for a model, optionally filtered to those covering `year`."""
+_ENGINE_FUELS = [   # keyword in the issue's engine text -> fuels it can apply to
+    (re.compile(r"diesel|tdi|crdi|dci|hdi|cdti|tdci|om651|n47|skyactiv-d", re.I), {"Diesel"}),
+    (re.compile(r"phev", re.I), {"Laddhybrid"}),
+    (re.compile(r"electric", re.I), {"El"}),
+    (re.compile(r"^hybrid$", re.I), {"Hybrid", "Laddhybrid"}),
+    (re.compile(r"tfsi|tsi|tce|puretech|ecoboost|bensin|dig-t|gdi|skyactiv-g|n20", re.I),
+     {"Bensin", "Hybrid", "Laddhybrid"}),
+]
+
+
+def issue_fuels(engine: str | None) -> set[str] | None:
+    """Fuels an engine-specific issue applies to; None = any (e.g. gearbox, chassis)."""
+    if not engine:
+        return None
+    for pattern, fuels in _ENGINE_FUELS:
+        if pattern.search(engine):
+            return fuels
+    return None
+
+
+def get_issues(brand: str, model: str, year: int | None = None,
+               fuel: str | None = None) -> list[dict]:
+    """Known issues for a model, filtered to `year` and (when known) the car's fuel,
+    so a diesel isn't briefed about a petrol engine's fault."""
     hit = match_model(brand, model)
     if hit is None:
         return []
@@ -94,5 +116,8 @@ def get_issues(brand: str, model: str, year: int | None = None) -> list[dict]:
             yf, yt = it.get("year_from"), it.get("year_to")
             if (yf is not None and year < yf) or (yt is not None and year > yt):
                 continue
+        fuels = issue_fuels(it.get("engine"))
+        if fuel and fuels is not None and fuel not in fuels:
+            continue
         out.append(it)
     return out

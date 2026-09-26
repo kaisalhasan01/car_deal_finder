@@ -1,0 +1,38 @@
+{
+  "name": "Car Deal Finder",
+  "dataColors": [
+    "#2a78d6", "#eb6834", "#1baf7a", "#eda100",
+    "#e87ba4", "#008300", "#4a3aa7", "#e34948"
+  ],
+  "background": "#ffffff",
+  "foreground": "#0b0b0b",
+  "tableAccent": "#2a78d6",
+  "good": "#0ca30c",
+  "neutral": "#fab219",
+  "bad": "#d03b3b",
+  "maximum": "#2a78d6",
+  "center": "#f0efec",
+  "minimum": "#e34948",
+  "null": "#c3c2b7",
+  "hyperlink": "#2a78d6",
+  "visitedHyperlink": "#4a3aa7",
+  "textClasses": {
+    "callout": { "fontSize": 28, "fontFace": "Segoe UI Semibold", "color": "#0b0b0b" },
+    "title": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#0b0b0b" },
+    "header": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#0b0b0b" },
+    "label": { "fontSize": 10, "fontFace": "Segoe UI", "color": "#52514e" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "border": [{ "show": false }],
+        "title": [{ "show": true, "fontColor": { "solid": { "color": "#0b0b0b" } } }]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#f9f9f7" } }, "transparency": 0 }]
+      }
+    }
+  }
+}

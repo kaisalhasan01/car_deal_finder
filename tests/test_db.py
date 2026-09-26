@@ -89,3 +89,13 @@ def test_fetch_listings_returns_matcher_shape(conn):
     assert row["year"] == 2018 and row["price"] == 100_000 and row["mileage"] == 120_000
     assert row["drivetrain"] == "AWD" and row["regnr"] == "ABC123"
     assert row["seller_type"] == "private" and row["fuel_type"] == "Diesel"
+
+
+def test_issue_view_respects_engine_fuel(conn):
+    from reference.known_issues_data import ISSUES
+    db.load_known_issues(conn, ISSUES)
+    today = date(2026, 9, 26)
+    db.upsert_listings(conn, [_rec("https://x/d", brand="BMW", model="3-serie", year=2013,
+                                   fuel_type="Diesel")], source="blocket", scope="q", today=today)
+    engines = {r["engine"] for r in conn.execute("SELECT engine FROM vw_listing_issues")}
+    assert engines == {"N47 diesel"}

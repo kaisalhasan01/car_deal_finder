@@ -142,6 +142,7 @@ CREATE TABLE IF NOT EXISTS known_issues (
     issue                    TEXT NOT NULL,
     what_to_check            TEXT,
     negotiation_leverage_sek INTEGER,  -- indicative repair cost / haggling room
+    applies_to_fuels         TEXT,     -- e.g. 'Diesel' or 'Bensin,Hybrid'; NULL = any fuel
     UNIQUE (brand, model, issue)
 );
 

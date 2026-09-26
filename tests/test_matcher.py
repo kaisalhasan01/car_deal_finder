@@ -133,3 +133,12 @@ def test_expanded_reference_data_covers_common_models():
     assert get_issues("Nissan", "Leaf", 2015)[0]["severity"] == "high"
     assert match_model("Mercedes-Benz", "C-klass") == ("Mercedes-Benz", "C-Klass")
     assert match_model("Mazda", "CX-5 2.2") == ("Mazda", "CX-5")
+
+
+def test_engine_specific_issues_follow_the_ads_fuel():
+    both = {it["engine"] for it in get_issues("BMW", "3-serie", 2013)}
+    assert both == {"N47 diesel", "N20 bensin"}                        # fuel unknown: show both
+    assert {it["engine"] for it in get_issues("BMW", "3-serie", 2013, fuel="Diesel")} == {"N47 diesel"}
+    assert {it["engine"] for it in get_issues("BMW", "3-serie", 2013, fuel="Bensin")} == {"N20 bensin"}
+    # gearbox issues are not fuel-specific
+    assert any("DSG" in it["engine"] for it in get_issues("Volkswagen", "Golf", 2012, fuel="Diesel"))

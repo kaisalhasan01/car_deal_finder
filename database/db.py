@@ -325,22 +325,27 @@ def spec_id_map(conn: sqlite3.Connection) -> dict[tuple[str, str, str], int]:
 
 
 def load_known_issues(conn: sqlite3.Connection, issues: Iterable[dict]) -> int:
+    from reference.lookup import issue_fuels   # same fuel logic as the Python briefing
+
     n = 0
     for it in issues:
+        fuels = issue_fuels(it.get("engine"))
         conn.execute(
             """INSERT INTO known_issues
                    (brand, model, year_from, year_to, engine, category, severity,
-                    issue, what_to_check, negotiation_leverage_sek)
+                    issue, what_to_check, negotiation_leverage_sek, applies_to_fuels)
                VALUES (:brand, :model, :year_from, :year_to, :engine, :category, :severity,
-                       :issue, :what_to_check, :negotiation_leverage_sek)
+                       :issue, :what_to_check, :negotiation_leverage_sek, :applies_to_fuels)
                ON CONFLICT(brand, model, issue) DO UPDATE SET
                    year_from=excluded.year_from, year_to=excluded.year_to,
                    engine=excluded.engine, category=excluded.category,
                    severity=excluded.severity, what_to_check=excluded.what_to_check,
-                   negotiation_leverage_sek=excluded.negotiation_leverage_sek""",
+                   negotiation_leverage_sek=excluded.negotiation_leverage_sek,
+                   applies_to_fuels=excluded.applies_to_fuels""",
             {**{k: None for k in (
                 "year_from", "year_to", "engine", "category", "severity",
-                "what_to_check", "negotiation_leverage_sek")}, **it},
+                "what_to_check", "negotiation_leverage_sek")}, **it,
+             "applies_to_fuels": ",".join(sorted(fuels)) if fuels else None},
         )
         n += 1
     conn.commit()
