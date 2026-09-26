@@ -38,12 +38,14 @@ def test_ad_stated_awd_beats_the_spec(market):
 
 
 def test_ad_stated_fuel_selects_consumption():
-    phev = evaluate(_car(fuel_type="Laddhybrid"), BuyerProfile())
+    phev = evaluate(_car(fuel_type="Laddhybrid"), BuyerProfile())      # V60 T6/T8 variant
     assert phev["attributes"]["fuel"] == "Laddhybrid"
-    assert phev["attributes"]["consumption_source"] == "typical"
+    assert phev["attributes"]["consumption_source"] == "spec"
+    assert phev["attributes"]["drivetrain"] == "AWD"
     assert phev["attributes"]["kwh_per_100km"] and phev["attributes"]["l_per_100km"]
-    diesel = evaluate(_car(fuel_type="Diesel"), BuyerProfile())
-    assert diesel["attributes"]["consumption_source"] == "spec"
+    ethanol = evaluate(_car(fuel_type="Etanol"), BuyerProfile())      # no curated variant
+    assert ethanol["attributes"]["consumption_source"] == "typical"
+    assert ethanol["attributes"]["l_per_100km"] == 9.0
 
 
 def test_seller_and_damage_filters():
@@ -113,3 +115,21 @@ def test_model_matching_handles_real_blocket_names():
 def test_insurance_calibration_points(kwargs, expected):
     """The calibration documented in HANDOFF.md §4 must not drift."""
     assert estimate_monthly_premium(year=date.today().year - 5, **kwargs) == expected
+
+
+def test_general_checks_follow_age_mileage_and_fuel():
+    old_diesel = evaluate(_car(year=2012, mileage=210_000, fuel_type="Diesel"), BuyerProfile())
+    checks = " ".join(old_diesel["briefing"]["general_checks"])
+    assert "rost" in checks and "kamrem" in checks and "DPF" in checks
+    ev = evaluate(_car(brand="Tesla", model="Model 3", year=2021, mileage=40_000,
+                       fuel_type="El"), BuyerProfile())
+    assert any("batterihälsorapport" in c for c in ev["briefing"]["general_checks"])
+
+
+def test_expanded_reference_data_covers_common_models():
+    assert get_spec("Volvo", "XC40", "El")["drivetrain"] == "AWD"
+    assert get_spec("Peugeot", "308")["reliability"] == 2
+    assert any("Kamremmen" in it["issue"] for it in get_issues("Peugeot", "308", 2017))
+    assert get_issues("Nissan", "Leaf", 2015)[0]["severity"] == "high"
+    assert match_model("Mercedes-Benz", "C-klass") == ("Mercedes-Benz", "C-Klass")
+    assert match_model("Mazda", "CX-5 2.2") == ("Mazda", "CX-5")

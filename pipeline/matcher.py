@@ -161,6 +161,24 @@ def seller_note(seller_type: str | None) -> str | None:
     return None
 
 
+def general_checks(listing: dict, attrs: dict) -> list[str]:
+    """Model-independent things every buyer should verify, driven by age, km and fuel."""
+    age = max(0, date.today().year - listing["year"])
+    km, fuel = listing.get("mileage"), attrs.get("fuel")
+    checks = ["Be om servicebok och jämför mätarställningen med besiktningshistoriken."]
+    if age >= 10:
+        checks.append("Äldre bil: kolla rost (trösklar, hjulhus, bromsrör) och slitna bussningar.")
+    if km is not None and km >= 150_000:
+        checks.append("Höga mil: fråga om kamrem/kamkedja, koppling och stötdämpare.")
+    if fuel == "Diesel" and km is not None and km >= 100_000:
+        checks.append("Diesel: fråga om körmönstret — mycket kortkörning belastar DPF/EGR.")
+    if fuel in ("El", "Laddhybrid"):
+        checks.append("Be om en batterihälsorapport (SOH) och testa laddningen.")
+    elif fuel == "Hybrid" and age >= 8:
+        checks.append("Äldre hybrid: be om test av hybridbatteriet.")
+    return checks
+
+
 def _build_briefing(listing: dict, attrs: dict) -> dict:
     brand, model, year = listing["brand"], listing["model"], listing["year"]
     issues = sorted(get_issues(brand, model, year),
@@ -193,6 +211,7 @@ def _build_briefing(listing: dict, attrs: dict) -> dict:
     return {
         "issues": issues, "negotiation_room_sek": leverage,
         "red_flags": red_flags, "signals": signals,
+        "general_checks": general_checks(listing, attrs),
         "seller_note": seller_note(listing.get("seller_type")),
         "history_links": history_links(listing.get("regnr")),
     }

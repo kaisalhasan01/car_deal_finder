@@ -144,6 +144,8 @@ def print_results(results: list[dict], profile: BuyerProfile, top_n: int, source
             print(f"    💬 Förhandlingsutrymme att verifiera: ~{sek(brief['negotiation_room_sek'])} kr")
         else:
             print("    ✅ Inga kända typfel registrerade för denna modell/år.")
+        for check in brief["general_checks"]:
+            print(f"    ☑️  {check}")
         if brief["seller_note"]:
             print(f"    ⚖️  {brief['seller_note']}")
         for link in brief["history_links"]:

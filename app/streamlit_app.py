@@ -181,6 +181,9 @@ with tab_match:
                                         f"→ {it['what_to_check']}")
                 else:
                     st.caption("✅ Inga kända typfel registrerade för denna modell/årsmodell.")
+                with st.expander("Köpkontroller"):
+                    for check in brief["general_checks"]:
+                        st.markdown(f"- {check}")
                 if brief["seller_note"]:
                     st.caption("⚖️ " + brief["seller_note"])
                 links = [f"[{l['label']}]({l['url']})" for l in brief["history_links"]]
